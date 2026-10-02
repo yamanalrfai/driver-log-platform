@@ -8,7 +8,7 @@ const STATUS_Y_MAP = {
   'ON': 160
 };
 
-export default function LogbookGrid({ events }) {
+export default function LogbookGrid({ events, violations = [] }) {
   const width = 800;
   const height = 200;
   const paddingLeft = 50;
@@ -68,6 +68,17 @@ export default function LogbookGrid({ events }) {
 
         {/* Draw the actual driver's log line */}
         <path d={pathD} fill="none" stroke="#2563eb" strokeWidth="3" strokeLinejoin="miter" />
+        {violations.map((v, i) => (
+              <circle 
+                key={i} 
+                cx={getX(v.minute)} 
+                cy={STATUS_Y_MAP['D']} 
+                r="6" 
+                fill="#dc2626" 
+                stroke="#ffffff" 
+                strokeWidth="2" 
+              />
+            ))}
       </svg>
     </div>
   );
