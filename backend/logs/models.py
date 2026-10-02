@@ -24,6 +24,7 @@ class DutyStatusEvent(models.Model):
     # We store time as minutes from midnight (0 to 1440) for easy math
     start_minute = models.PositiveSmallIntegerField()
     end_minute = models.PositiveSmallIntegerField()
-
+    class Meta:
+        ordering = ['start_minute']
     def __str__(self):
         return f"{self.status} from {self.start_minute} to {self.end_minute}"
