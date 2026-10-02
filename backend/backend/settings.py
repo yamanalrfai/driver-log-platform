@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(xxx_x#7^u7#q3ag2-^*fynswna&1e=bk8*^z+9xdkhrmkl2ei
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['driver-log-platform.onrender.com']
 
 
 # Application definition
@@ -133,4 +133,5 @@ MAILERS = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:3000",
+    "https://hilarious-sunflower-bbaffe.netlify.app/"
 ]
