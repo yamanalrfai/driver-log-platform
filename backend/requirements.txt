@@ -2,3 +2,4 @@ django==6.1.1
 djangorestframework
 django-cors-headers
 gunicorn
+whitenoise
